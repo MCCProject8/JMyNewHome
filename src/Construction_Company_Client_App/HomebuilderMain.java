@@ -1,9 +1,11 @@
 package Construction_Company_Client_App;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
@@ -38,10 +40,14 @@ public class HomebuilderMain extends JFrame{
 		HomebuilderJPanel panelTitle = new HomebuilderJPanel();
 		HomebuilderJPanelModels panelModels = new HomebuilderJPanelModels();
 		HomebuilderJPanelTextArea panelTextarea = new HomebuilderJPanelTextArea();
+		JPanel p = new JPanel();
+		p.setBackground(Color.decode("#CCA37A"));
+
 		
 		add(panelTitle, BorderLayout.NORTH);
 		add(panelModels, BorderLayout.WEST);
 		add(panelTextarea, BorderLayout.CENTER);
+		add(p, BorderLayout.EAST);
 		
 		
 		try {
