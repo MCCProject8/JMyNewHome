@@ -12,26 +12,26 @@ public class HomebuilderJPanelModels extends JPanel{
 	
 	public JLabel modelLabel = new JLabel("       Models");
 	
-	public JButton modelAspenButton = new JButton("   Aspen   ");
-	public JButton modelBrittanyButton = new JButton(" Brittany  ");
-	public JButton modelColonialButton = new JButton(" Colonial  ");
-	public JButton modelDartmoorButton = new JButton("Dartmoor");
+	public static JButton modelAspenButton = new JButton("   Aspen   ");
+	public static JButton modelBrittanyButton = new JButton(" Brittany  ");
+	public static JButton modelColonialButton = new JButton(" Colonial  ");
+	public static JButton modelDartmoorButton = new JButton("Dartmoor");
 	
 	public JLabel emptySpace = new JLabel(" ");
 	public JLabel bedroomLabel = new JLabel("    Bedrooms");
 	
-	public JButton bedroom1 = new JButton("1");
-	public JButton bedroom2 = new JButton("2");
-	public JButton bedroom3 = new JButton("3");
-	public JButton bedroom4 = new JButton("4");
+	public static JButton bedroom1 = new JButton("1");
+	public static JButton bedroom2 = new JButton("2");
+	public static JButton bedroom3 = new JButton("3");
+	public static JButton bedroom4 = new JButton("4");
 	
 	public JLabel emptySpace2 = new JLabel(" ");
 	public JLabel garageLabel = new JLabel("Garages");
 	
-	public JButton garage0 = new JButton("0");
-	public JButton garage1 = new JButton("1");
-	public JButton garage2 = new JButton("2");
-	public JButton garage3 = new JButton("3");
+	public static JButton garage0 = new JButton("0");
+	public static JButton garage1 = new JButton("1");
+	public static JButton garage2 = new JButton("2");
+	public static JButton garage3 = new JButton("3");
 
 
 		
@@ -39,6 +39,8 @@ public class HomebuilderJPanelModels extends JPanel{
 		setBackground(Color.decode("#CCA37A"));
 		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		this.setBorder(Borders.blackline);
+		
+		modelListener eventListener = new modelListener();
 
 		
 		ButtonGroup modelGroup = new ButtonGroup();
@@ -46,7 +48,7 @@ public class HomebuilderJPanelModels extends JPanel{
 		modelGroup.add(modelBrittanyButton);
 		modelGroup.add(modelColonialButton);
 		modelGroup.add(modelDartmoorButton);
-		
+				
 		ButtonGroup bedroomGroup = new ButtonGroup();
 		bedroomGroup.add(bedroom1);
 		bedroomGroup.add(bedroom2);
@@ -65,6 +67,12 @@ public class HomebuilderJPanelModels extends JPanel{
 		garage1.setBounds(42,70,45,20);
 		garage2.setBounds(0,91,45,20);
 		garage3.setBounds(42,91,45,20);
+		
+		
+		modelAspenButton.addActionListener(eventListener);
+		bedroom1.addActionListener(eventListener);
+		garage1.addActionListener(eventListener);
+
 
 
 		bedroomPanel.add(bedroom1);

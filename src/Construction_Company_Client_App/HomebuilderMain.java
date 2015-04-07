@@ -35,6 +35,7 @@ public class HomebuilderMain extends JFrame{
 		setSize(WIDTH, HEIGHT);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
+		setResizable(false);
 		setLayout(new BorderLayout());
 		
 		HomebuilderJPanel panelTitle = new HomebuilderJPanel();

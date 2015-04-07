@@ -11,12 +11,13 @@ public class HomebuilderJPanelTextArea extends JPanel{
 	
 	Fonts font = new Fonts();
 	public static int width = 250;
+	public static JTextArea area;
 	
 	public HomebuilderJPanelTextArea(){
 		setBackground(Color.decode("#CCA37A"));
 		setLayout(null);
 		
-		JTextArea area = new JTextArea();
+		area = new JTextArea();
 		area.setLineWrap(true);
 		area.setSize(width,HomebuilderMain.HEIGHT);
 		area.setFont(font.cosmicArea);
