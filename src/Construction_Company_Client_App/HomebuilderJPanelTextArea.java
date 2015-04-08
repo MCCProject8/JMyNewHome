@@ -3,6 +3,7 @@ package Construction_Company_Client_App;
 
 import java.awt.Color;
 
+import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
@@ -12,10 +13,13 @@ public class HomebuilderJPanelTextArea extends JPanel{
 	Fonts font = new Fonts();
 	public static int width = 250;
 	public static JTextArea area;
+	public static JButton enter;
 	
 	public HomebuilderJPanelTextArea(){
 		setBackground(Color.decode("#CCA37A"));
 		setLayout(null);
+		
+		enter = new JButton("Enter");
 		
 		area = new JTextArea();
 		area.setLineWrap(true);
@@ -29,9 +33,13 @@ public class HomebuilderJPanelTextArea extends JPanel{
 		JScrollPane scroll = new JScrollPane (area, 
 				   JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 		scroll.setBounds(20,30,width,HomebuilderMain.HEIGHT / 3);
-		
-		
+		enter.setBounds(20,170,100,25);
+		enter.addActionListener(new enterActionListener());
+
 		add(scroll);
+		add(enter);
 	}
+	
+	
 
 }

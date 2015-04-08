@@ -40,7 +40,11 @@ public class HomebuilderJPanelModels extends JPanel{
 		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		this.setBorder(Borders.blackline);
 		
-		modelListener eventListener = new modelListener();
+		
+		
+		modelListener ModelListener = new modelListener();
+		bedroomListener BedroomListener = new bedroomListener();
+		garageListener GarageListener = new garageListener();
 
 		
 		ButtonGroup modelGroup = new ButtonGroup();
@@ -48,6 +52,7 @@ public class HomebuilderJPanelModels extends JPanel{
 		modelGroup.add(modelBrittanyButton);
 		modelGroup.add(modelColonialButton);
 		modelGroup.add(modelDartmoorButton);
+		
 				
 		ButtonGroup bedroomGroup = new ButtonGroup();
 		bedroomGroup.add(bedroom1);
@@ -69,11 +74,40 @@ public class HomebuilderJPanelModels extends JPanel{
 		garage3.setBounds(42,91,45,20);
 		
 		
-		modelAspenButton.addActionListener(eventListener);
-		bedroom1.addActionListener(eventListener);
-		garage1.addActionListener(eventListener);
+		modelAspenButton.addActionListener(ModelListener);
+		modelBrittanyButton.addActionListener(ModelListener);
+		modelColonialButton.addActionListener(ModelListener);
+		modelDartmoorButton.addActionListener(ModelListener);
+		
+		bedroom1.addActionListener(BedroomListener);
+		bedroom2.addActionListener(BedroomListener);
+		bedroom3.addActionListener(BedroomListener);
+		bedroom4.addActionListener(BedroomListener);
+		
+		garage0.addActionListener(GarageListener);
+		garage1.addActionListener(GarageListener);
+		garage2.addActionListener(GarageListener);
+		garage3.addActionListener(GarageListener);
+		
+		modelAspenButton.setFocusPainted(false);
+		modelBrittanyButton.setFocusPainted(false);
+		modelColonialButton.setFocusPainted(false);
+		modelDartmoorButton.setFocusPainted(false);
+		
+		modelAspenButton.setFocusable(false);
+		modelBrittanyButton.setFocusable(false);
+		modelColonialButton.setFocusable(false);
+		modelDartmoorButton.setFocusable(false);
 
-
+		bedroom1.setFocusable(false);
+		bedroom2.setFocusable(false);
+		bedroom3.setFocusable(false);
+		bedroom4.setFocusable(false);
+		
+		garage0.setFocusable(false);
+		garage1.setFocusable(false);
+		garage2.setFocusable(false);
+		garage3.setFocusable(false);
 
 		bedroomPanel.add(bedroom1);
 		bedroomPanel.add(bedroom2);
@@ -85,8 +119,7 @@ public class HomebuilderJPanelModels extends JPanel{
 		bedroomPanel.add(garage1);
 		bedroomPanel.add(garage2);
 		bedroomPanel.add(garage3);
-
-		
+	
 		add(modelLabel);
 		add(modelAspenButton);
 		add(modelBrittanyButton);
@@ -98,5 +131,7 @@ public class HomebuilderJPanelModels extends JPanel{
 		
 		
 	}
+	
+	
 	
 }
