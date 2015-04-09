@@ -50,6 +50,7 @@ public class HomebuilderData {
 		}
 		else 
 		{
+			setModelType("null");
 			this.modelPrice = 0;
 		}
 

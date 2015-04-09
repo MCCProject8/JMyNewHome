@@ -23,7 +23,7 @@ public class OnClick implements MouseListener {
 			String message = Global.data.finalMessage();	
 			HomebuilderJPanelTextArea.area.setText(message);
 			String type = Global.data.getModelType();
-		
+		System.out.print(type);
 			
 		}
 		
@@ -33,6 +33,7 @@ public class OnClick implements MouseListener {
 			Global.data.setmodelPrice("null");
 			Global.data.setbedroomPrice(5);
 			Global.data.setgaragePrice(5);
+		
 
 		}
 	}
@@ -59,7 +60,7 @@ public class OnClick implements MouseListener {
 		if(source == HomebuilderJPanelTextArea.clear)
 		{
 			HomebuilderJPanelTextArea.area.setText(Global.data.defaultMessage);
-			Global.data.setmodelPrice("null"); // Pass nul will be handled by the else
+			Global.data.setmodelPrice("null"); // Pass null will be handled by the else
 			Global.data.setbedroomPrice(-1); // This will be handled by the else
 			Global.data.setgaragePrice(-1); // This will be handled by the else
 		}
