@@ -2,6 +2,13 @@ package Construction_Company_Client_App;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 
 public class modelListener implements ActionListener {
 
@@ -11,7 +18,7 @@ public class modelListener implements ActionListener {
 		
 		if(source == HomebuilderJPanelModels.modelAspenButton)
 		{
-			Global.data.setmodelPrice("Aspen");
+			Global.data.setmodelPrice("Aspen");			
 		}
 		if(source == HomebuilderJPanelModels.modelBrittanyButton)
 		{

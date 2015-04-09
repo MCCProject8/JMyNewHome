@@ -4,8 +4,14 @@ package Construction_Company_Client_App;
 import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
@@ -17,8 +23,11 @@ public class HomebuilderJPanelTextArea extends JPanel{
 	public static JTextArea area;
 	public static JButton enter;
 	public static JButton clear;
+
+	public static BufferedImage myPicture;
+	public static JLabel picLabel;
 	
-	public HomebuilderJPanelTextArea(){
+	public HomebuilderJPanelTextArea() throws IOException{
 		setBackground(Color.decode("#CCA37A"));
 		setLayout(null);
 		
@@ -43,12 +52,14 @@ public class HomebuilderJPanelTextArea extends JPanel{
 		clear.setBounds(170,170,100,25);
 		clear.setFocusPainted(false);
 		clear.addMouseListener(new OnClick());
-
+		
+		myPicture = ImageIO.read(new File("blueprint.jpg"));
+		picLabel  = new JLabel(new ImageIcon(myPicture));
+		picLabel.setBounds(20,200,250,130);
+		
+		add(picLabel);
 		add(scroll);
 		add(enter);
-		add(clear);
+		add(clear);	
 	}
-	
-	
-
 }

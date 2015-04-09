@@ -2,6 +2,12 @@ package Construction_Company_Client_App;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 
 public class OnClick implements MouseListener {
 
@@ -16,6 +22,9 @@ public class OnClick implements MouseListener {
 		{
 			String message = Global.data.finalMessage();	
 			HomebuilderJPanelTextArea.area.setText(message);
+			String type = Global.data.getModelType();
+		
+			
 		}
 		
 		if(source == HomebuilderJPanelTextArea.clear)

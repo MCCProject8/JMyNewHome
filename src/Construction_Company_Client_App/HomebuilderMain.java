@@ -3,6 +3,7 @@ package Construction_Company_Client_App;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
+import java.io.IOException;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -21,8 +22,19 @@ public class HomebuilderMain extends JFrame{
 			
 			@Override
 			public void run() {
-				HomebuilderMain frame = new HomebuilderMain();
-				frame.setVisible(true);
+				
+				HomebuilderMain frame;
+				
+				try {
+					
+					frame = new HomebuilderMain();
+					frame.setVisible(true);
+				
+				} catch (IOException e) {
+					
+					e.printStackTrace();
+				}
+				
 				
 			}
 			
@@ -31,7 +43,7 @@ public class HomebuilderMain extends JFrame{
 
 	}
 	
-	public HomebuilderMain(){
+	public HomebuilderMain() throws IOException{
 		setSize(WIDTH, HEIGHT);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);

@@ -11,26 +11,40 @@ public class HomebuilderData {
 	public String defaultMessage = ("Enjoy Building Your New Home!\n"
 			+ " - Aspen = $100,000\n - Brittany = $120,000\n - Colonial = $180,000\n - Dartmoor = $250,000"
 			+ "\n - 1 bedroom = $10,500\n - 1 garage = $7,775");
+	String modelType;
 	
+	public void setModelType(String modelT){
 	
+		modelType = modelT;
+	}
+	
+	public String getModelType(){
+		
+		return modelType;
+	}
+		
 	public void setmodelPrice(String modelPrice){
+		
 		
 		if(modelPrice == "Aspen")
 		{
+			setModelType("Aspen");
 			this.modelPrice = 100000;
 		}
 		else if(modelPrice == "Brittany")
 		{
+			setModelType("Brittany");
 			this.modelPrice = 120000;
-
 		}
 		else if(modelPrice == "Colonial")
 		{
+			setModelType("Colonial");
 			this.modelPrice = 180000;
 
 		}
 		else if(modelPrice == "Dartmoor")
 		{
+			setModelType("Dartmoor");
 			this.modelPrice = 250000;
 
 		}
