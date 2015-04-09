@@ -5,43 +5,30 @@ import java.awt.event.ActionListener;
 
 public class bedroomListener implements ActionListener {
 
-		int bedroomPrice;
-	
-		HomebuilderData storeData = new HomebuilderData();
-
 	@Override
 	public void actionPerformed(ActionEvent e) {
-	
 		Object source = e.getSource();
-			
 		
 		if(source == HomebuilderJPanelModels.bedroom1)
 		{
-			storeData.setbedroomPrice(10500);
-			HomebuilderJPanelModels.bedroom1.setFocusable(true);
-	
+			Global.data.setbedroomPrice(1);
 		}
-		else if(source == HomebuilderJPanelModels.bedroom2)
+		if(source == HomebuilderJPanelModels.bedroom2)
 		{
-			storeData.setbedroomPrice(10500 * 2);
-			HomebuilderJPanelModels.bedroom2.setFocusable(true);
-	
+			Global.data.setbedroomPrice(2);
+
 		}
-		else if(source == HomebuilderJPanelModels.bedroom3)
+		if(source == HomebuilderJPanelModels.bedroom3)
 		{
-			storeData.setbedroomPrice(10500 * 3);
-			HomebuilderJPanelModels.bedroom3.setFocusable(true);
-	
-	
+			Global.data.setbedroomPrice(3);
+
 		}
-		else if(source == HomebuilderJPanelModels.bedroom4)
+		if(source == HomebuilderJPanelModels.bedroom4)
 		{
-			storeData.setbedroomPrice(10500 * 4);
-			HomebuilderJPanelModels.bedroom4.setFocusable(true);
-	
+			Global.data.setbedroomPrice(4);
+
 		}
-		
-	
+
 	}
 
 }

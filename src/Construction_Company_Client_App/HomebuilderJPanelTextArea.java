@@ -2,6 +2,8 @@ package Construction_Company_Client_App;
 
 
 import java.awt.Color;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
@@ -14,12 +16,14 @@ public class HomebuilderJPanelTextArea extends JPanel{
 	public static int width = 250;
 	public static JTextArea area;
 	public static JButton enter;
+	public static JButton clear;
 	
 	public HomebuilderJPanelTextArea(){
 		setBackground(Color.decode("#CCA37A"));
 		setLayout(null);
 		
 		enter = new JButton("Enter");
+		clear = new JButton("Clear");
 		
 		area = new JTextArea();
 		area.setLineWrap(true);
@@ -27,17 +31,22 @@ public class HomebuilderJPanelTextArea extends JPanel{
 		area.setFont(font.cosmicArea);
 		area.setBorder(Borders.blackline);
 		area.setEditable(false);
-		area.setText("Enjoy Building Your New Home.\n"
-				+ "Aspen = $100,000\nBrittany = $120,000\nColonial = $180,000\nDartmoor = $250,000"
-				+ "\n1 bedroom = $10,500\n1 garage = $7,775");
+		area.setText(Global.data.defaultMessage);
 		JScrollPane scroll = new JScrollPane (area, 
 				   JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 		scroll.setBounds(20,30,width,HomebuilderMain.HEIGHT / 3);
+		
 		enter.setBounds(20,170,100,25);
-		enter.addActionListener(new enterActionListener());
+		enter.setFocusPainted(false);
+		enter.addMouseListener(new OnClick());
+		
+		clear.setBounds(170,170,100,25);
+		clear.setFocusPainted(false);
+		clear.addMouseListener(new OnClick());
 
 		add(scroll);
 		add(enter);
+		add(clear);
 	}
 	
 	

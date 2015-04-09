@@ -40,20 +40,16 @@ public class HomebuilderJPanelModels extends JPanel{
 		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		this.setBorder(Borders.blackline);
 		
-		
-		
 		modelListener ModelListener = new modelListener();
 		bedroomListener BedroomListener = new bedroomListener();
 		garageListener GarageListener = new garageListener();
 
-		
 		ButtonGroup modelGroup = new ButtonGroup();
 		modelGroup.add(modelAspenButton);
 		modelGroup.add(modelBrittanyButton);
 		modelGroup.add(modelColonialButton);
 		modelGroup.add(modelDartmoorButton);
 		
-				
 		ButtonGroup bedroomGroup = new ButtonGroup();
 		bedroomGroup.add(bedroom1);
 		bedroomGroup.add(bedroom2);

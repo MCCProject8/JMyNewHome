@@ -1,6 +1,6 @@
 package Construction_Company_Client_App;
 
-import com.sun.accessibility.internal.resources.accessibility;
+import java.text.DecimalFormat;
 
 public class HomebuilderData {
 
@@ -8,30 +8,80 @@ public class HomebuilderData {
 	int bedroomPrice; 
 	int garagePrice;
 	int finalPrice;
+	public String defaultMessage = ("Enjoy Building Your New Home!\n"
+			+ " - Aspen = $100,000\n - Brittany = $120,000\n - Colonial = $180,000\n - Dartmoor = $250,000"
+			+ "\n - 1 bedroom = $10,500\n - 1 garage = $7,775");
 	
-	public int getmodelPrice(){
-		
-		return modelPrice;
-	}
-	public void setmodelPrice(int modelPrice){
-		
-		this.modelPrice = modelPrice;
-	}
-	public int getbedroomPrice(){
 	
-		return bedroomPrice;
-	}	
-	public void setbedroomPrice(int bedroomPrice){
+	public void setmodelPrice(String modelPrice){
+		
+		if(modelPrice == "Aspen")
+		{
+			this.modelPrice = 100000;
+		}
+		else if(modelPrice == "Brittany")
+		{
+			this.modelPrice = 120000;
+
+		}
+		else if(modelPrice == "Colonial")
+		{
+			this.modelPrice = 180000;
+
+		}
+		else if(modelPrice == "Dartmoor")
+		{
+			this.modelPrice = 250000;
+
+		}
+
+	}
 	
-		this.bedroomPrice = bedroomPrice;
-	}
-	public int getgaragePrice(){
+	public void setbedroomPrice(int bedroomAmount){
+	
+		if(bedroomAmount == 1)
+		{
+			bedroomPrice = 10500;
+		}
+		else if(bedroomAmount == 2)
+		{
+			bedroomPrice = 10500 * 2;
+
+		}
+		else if(bedroomAmount == 3)
+		{
+			bedroomPrice = 10500 * 3;
+
+		}
+		else if(bedroomAmount == 4)
+		{
+			bedroomPrice = 10500 * 4;
+
+		}
 		
-		return garagePrice;
 	}
-	public void setgaragePrice(int garagePrice){
+	
+	public void setgaragePrice(int garageAmount){
 		
-		this.garagePrice = garagePrice;
+		if(garageAmount == 0)
+		{
+			garagePrice = 0;
+
+		}
+		else if(garageAmount == 1)
+		{
+			garagePrice = 7775;
+		}
+		else if(garageAmount == 2)
+		{
+			garagePrice = 7775 * 2;
+
+		}
+		else if(garageAmount == 3)
+		{
+			garagePrice = 7775 * 3;
+
+		}
 	}
 	
 	public int setFinalHomePrice(){
@@ -44,18 +94,21 @@ public class HomebuilderData {
 	
 	public String finalMessage(){
 		
-		String modelPrice = String.valueOf(this.modelPrice);
-		String bedroomPrice = String.valueOf(this.bedroomPrice);
-		String garagePrice = String.valueOf(this.garagePrice);
-		String finalPrice = String.valueOf(this.finalPrice);
+		DecimalFormat df = new DecimalFormat("$#,###,###,###.00");
+		setFinalHomePrice();
+		
+		String modelPrice = String.valueOf(df.format(this.modelPrice));
+		String bedroomPrice = String.valueOf(df.format(this.bedroomPrice));
+		String garagePrice = String.valueOf(df.format(this.garagePrice));
+		String finalPrice = String.valueOf(df.format(this.finalPrice));
 		
 		StringBuilder str = new StringBuilder();
-		str.append("Your price quote is: ");
-		str.append("Model Price: ");
+		str.append("Your price quote is:\n");
+		str.append(" - Model Price: ");
 		str.append(modelPrice);
-		str.append("Bedroom Price: ");
+		str.append("\n - Bedroom Price: ");
 		str.append(bedroomPrice);
-		str.append("Garage Price: ");
+		str.append("\n - Garage Price: ");
 		str.append(garagePrice);
 		str.append("\n");
 		str.append("Your total comes to: ");
