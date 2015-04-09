@@ -48,6 +48,10 @@ public class HomebuilderData {
 			this.modelPrice = 250000;
 
 		}
+		else 
+		{
+			this.modelPrice = 0;
+		}
 
 	}
 	
@@ -72,6 +76,10 @@ public class HomebuilderData {
 			bedroomPrice = 10500 * 4;
 
 		}
+		else
+		{
+			bedroomPrice = 0;
+		}
 		
 	}
 	
@@ -95,6 +103,10 @@ public class HomebuilderData {
 		{
 			garagePrice = 7775 * 3;
 
+		}
+		else 
+		{
+			garagePrice = 0;
 		}
 	}
 	
