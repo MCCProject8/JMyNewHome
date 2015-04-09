@@ -2,6 +2,7 @@ package Construction_Company_Client_App;
 
 import java.awt.Color;
 
+import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
@@ -13,7 +14,7 @@ public class HomebuilderJPanelModels extends JPanel{
 	public JLabel modelLabel = new JLabel("       Models");
 	
 	public static JButton modelAspenButton = new JButton("   Aspen   ");
-	public static JButton modelBrittanyButton = new JButton(" Brittany  ");
+	public static JButton modelBrittanyButton = new JButton(" Brittany  "); 
 	public static JButton modelColonialButton = new JButton(" Colonial  ");
 	public static JButton modelDartmoorButton = new JButton("Dartmoor");
 	
@@ -38,7 +39,7 @@ public class HomebuilderJPanelModels extends JPanel{
 	public HomebuilderJPanelModels(){
 		setBackground(Color.decode("#CCA37A"));
 		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-		this.setBorder(Borders.blackline);
+		this.setBorder(BorderFactory.createTitledBorder("Create Tools"));
 		
 		modelListener ModelListener = new modelListener();
 		bedroomListener BedroomListener = new bedroomListener();
