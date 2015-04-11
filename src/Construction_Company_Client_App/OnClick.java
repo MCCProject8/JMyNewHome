@@ -2,6 +2,7 @@ package Construction_Company_Client_App;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
@@ -22,9 +23,7 @@ public class OnClick implements MouseListener {
 		{
 			String message = Global.data.finalMessage();	
 			HomebuilderJPanelTextArea.area.setText(message);
-			String type = Global.data.getModelType();
-		System.out.print(type);
-			
+
 		}
 		
 		if(source == HomebuilderJPanelTextArea.clear)
@@ -33,7 +32,9 @@ public class OnClick implements MouseListener {
 			Global.data.setmodelPrice("null");
 			Global.data.setbedroomPrice(5);
 			Global.data.setgaragePrice(5);
-		
+			
+			ImageIcon i = new ImageIcon("blueprint.jpg");
+			HomebuilderJPanelTextArea.picLabel.setIcon(i);
 
 		}
 	}
@@ -55,6 +56,9 @@ public class OnClick implements MouseListener {
 		{
 			String message = Global.data.finalMessage();	
 			HomebuilderJPanelTextArea.area.setText(message);
+			HomebuilderJPanelTextArea.picLabel  = new JLabel(new ImageIcon("Aspen.jpg"));
+
+
 		}
 		
 		if(source == HomebuilderJPanelTextArea.clear)
@@ -63,6 +67,9 @@ public class OnClick implements MouseListener {
 			Global.data.setmodelPrice("null"); // Pass null will be handled by the else
 			Global.data.setbedroomPrice(-1); // This will be handled by the else
 			Global.data.setgaragePrice(-1); // This will be handled by the else
+			
+			ImageIcon i = new ImageIcon("blueprint.jpg");
+			HomebuilderJPanelTextArea.picLabel.setIcon(i);
 		}
 	}
 

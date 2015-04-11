@@ -18,21 +18,29 @@ public class modelListener implements ActionListener {
 		
 		if(source == HomebuilderJPanelModels.modelAspenButton)
 		{
-			Global.data.setmodelPrice("Aspen");			
+			Global.data.setmodelPrice("Aspen");	
+			ImageIcon i = new ImageIcon("Aspen.jpg");
+			HomebuilderJPanelTextArea.picLabel.setIcon(i);
 		}
 		if(source == HomebuilderJPanelModels.modelBrittanyButton)
 		{
 			Global.data.setmodelPrice("Brittany");
-
+			ImageIcon i = new ImageIcon("Brittany.jpg");
+			HomebuilderJPanelTextArea.picLabel.setIcon(i);
 		}
 		if(source == HomebuilderJPanelModels.modelColonialButton)
 		{
 			Global.data.setmodelPrice("Colonial");
-
+			ImageIcon i = new ImageIcon("Colonial.jpg");
+			HomebuilderJPanelTextArea.picLabel.setIcon(i);
+			HomebuilderJPanelTextArea.picLabel.setBounds(57,200,300,130);
 		}
 		if(source == HomebuilderJPanelModels.modelDartmoorButton)
 		{
 			Global.data.setmodelPrice("Dartmoor");
+			ImageIcon i = new ImageIcon("Dartmoor.jpg");
+			HomebuilderJPanelTextArea.picLabel.setIcon(i);
+			HomebuilderJPanelTextArea.picLabel.setBounds(17,200,300,130);
 
 		}
 		

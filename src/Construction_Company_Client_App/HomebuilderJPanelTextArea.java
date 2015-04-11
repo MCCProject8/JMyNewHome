@@ -24,7 +24,6 @@ public class HomebuilderJPanelTextArea extends JPanel{
 	public static JButton enter;
 	public static JButton clear;
 
-	public static BufferedImage myPicture;
 	public static JLabel picLabel;
 	
 	public HomebuilderJPanelTextArea() throws IOException{
@@ -53,9 +52,10 @@ public class HomebuilderJPanelTextArea extends JPanel{
 		clear.setFocusPainted(false);
 		clear.addMouseListener(new OnClick());
 		
-		myPicture = ImageIO.read(new File("blueprint.jpg"));
-		picLabel  = new JLabel(new ImageIcon(myPicture));
-		picLabel.setBounds(20,200,250,130);
+		ImageIcon image = new ImageIcon("blueprint.jpg");
+		picLabel = new JLabel();
+		picLabel.setIcon(image);
+		picLabel.setBounds(25,200,250,130);
 		
 		add(picLabel);
 		add(scroll);
