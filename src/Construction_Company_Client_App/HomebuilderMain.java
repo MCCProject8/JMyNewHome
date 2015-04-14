@@ -15,8 +15,6 @@ public class HomebuilderMain extends JFrame{
 	public static int WIDTH = 400;
 	public static int HEIGHT = 400;
 
-	
-
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			
@@ -24,12 +22,20 @@ public class HomebuilderMain extends JFrame{
 			public void run() {
 				
 				HomebuilderMain frame;
+				detailFrame frame2;
+				
 				
 				try {
 					
 					frame = new HomebuilderMain();
+					frame2 = new detailFrame();
 					frame.setVisible(true);
+					frame2.setVisible(true);
 				
+					
+					frame2.setLocation(frame.getX() + 500, frame.getY() - 10);
+				
+					
 				} catch (IOException e) {
 					
 					e.printStackTrace();
@@ -49,6 +55,7 @@ public class HomebuilderMain extends JFrame{
 		setLocationRelativeTo(null);
 		setResizable(false);
 		setLayout(new BorderLayout());
+		setTitle("Build Your Own Home");
 		
 		HomebuilderJPanel panelTitle = new HomebuilderJPanel();
 		HomebuilderJPanelModels panelModels = new HomebuilderJPanelModels();
@@ -76,5 +83,6 @@ public class HomebuilderMain extends JFrame{
 		    }
 		
 	}
-
+	
+	
 }

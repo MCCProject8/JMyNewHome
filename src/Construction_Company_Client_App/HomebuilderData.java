@@ -8,6 +8,8 @@ public class HomebuilderData {
 	int bedroomPrice; 
 	int garagePrice;
 	int finalPrice;
+	int bedroomAmount;
+	int garageAmount;
 	public String defaultMessage = ("Enjoy Building Your New Home!\n"
 			+ " - Aspen = $100,000\n - Brittany = $120,000\n - Colonial = $180,000\n - Dartmoor = $250,000"
 			+ "\n - 1 bedroom = $10,500\n - 1 garage = $7,775");
@@ -81,7 +83,7 @@ public class HomebuilderData {
 		{
 			bedroomPrice = 0;
 		}
-		
+				
 	}
 	
 	public void setgaragePrice(int garageAmount){
@@ -109,6 +111,7 @@ public class HomebuilderData {
 		{
 			garagePrice = 0;
 		}
+		
 	}
 	
 	public int setFinalHomePrice(){
@@ -145,6 +148,26 @@ public class HomebuilderData {
 
 		return quote;
 		
+	}
+	
+	public int getBedroomAmount(){
+		
+		return bedroomAmount;	
+	}
+	
+	public int getGarageroomAmount(){
+		
+		return garageAmount;	
+	}
+	
+	public void setBedroomAmount(int bedroomAmount){
+	
+		this.bedroomAmount = bedroomAmount;
+	}
+	
+	public void setGarageroomAmount(int garageAmount){
+		
+		this.garageAmount = garageAmount;
 	}
 	
 	

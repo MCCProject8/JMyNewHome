@@ -12,21 +12,22 @@ public class bedroomListener implements ActionListener {
 		if(source == HomebuilderJPanelModels.bedroom1)
 		{
 			Global.data.setbedroomPrice(1);
+			Global.data.setBedroomAmount(1);
 		}
 		if(source == HomebuilderJPanelModels.bedroom2)
 		{
 			Global.data.setbedroomPrice(2);
-
+			Global.data.setBedroomAmount(2);
 		}
 		if(source == HomebuilderJPanelModels.bedroom3)
 		{
 			Global.data.setbedroomPrice(3);
-
+			Global.data.setBedroomAmount(3);
 		}
 		if(source == HomebuilderJPanelModels.bedroom4)
 		{
 			Global.data.setbedroomPrice(4);
-
+			Global.data.setBedroomAmount(4);
 		}
 
 	}

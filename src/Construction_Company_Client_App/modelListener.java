@@ -1,5 +1,6 @@
 package Construction_Company_Client_App;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
@@ -12,6 +13,8 @@ import javax.swing.JLabel;
 
 public class modelListener implements ActionListener {
 
+	public static boolean isPressed = false;
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		Object source = e.getSource();
@@ -21,12 +24,18 @@ public class modelListener implements ActionListener {
 			Global.data.setmodelPrice("Aspen");	
 			ImageIcon i = new ImageIcon("Aspen.jpg");
 			HomebuilderJPanelTextArea.picLabel.setIcon(i);
+			HomebuilderJPanelTextArea.picLabel.setBounds(17,200,300,130);
+								
 		}
 		if(source == HomebuilderJPanelModels.modelBrittanyButton)
 		{
 			Global.data.setmodelPrice("Brittany");
 			ImageIcon i = new ImageIcon("Brittany.jpg");
 			HomebuilderJPanelTextArea.picLabel.setIcon(i);
+			HomebuilderJPanelTextArea.picLabel.setBounds(17,200,300,130);
+			
+			HomebuilderJPanelTextArea.enter.setFocusable(false);
+			
 		}
 		if(source == HomebuilderJPanelModels.modelColonialButton)
 		{
@@ -34,7 +43,9 @@ public class modelListener implements ActionListener {
 			ImageIcon i = new ImageIcon("Colonial.jpg");
 			HomebuilderJPanelTextArea.picLabel.setIcon(i);
 			HomebuilderJPanelTextArea.picLabel.setBounds(57,200,300,130);
-		}
+			
+		}		
+		
 		if(source == HomebuilderJPanelModels.modelDartmoorButton)
 		{
 			Global.data.setmodelPrice("Dartmoor");
@@ -42,6 +53,7 @@ public class modelListener implements ActionListener {
 			HomebuilderJPanelTextArea.picLabel.setIcon(i);
 			HomebuilderJPanelTextArea.picLabel.setBounds(17,200,300,130);
 
+			
 		}
 		
 
