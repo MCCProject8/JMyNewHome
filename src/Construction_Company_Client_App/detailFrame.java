@@ -11,6 +11,7 @@ public class detailFrame extends JFrame {
 	public detailFrame()
 	{
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setResizable(false);
 		
 		setSize(200,200);
 		setTitle("Tools");
