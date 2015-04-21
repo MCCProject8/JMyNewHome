@@ -23,8 +23,7 @@ public class HomebuilderMain extends JFrame{
 				
 				HomebuilderMain frame;
 				detailFrame frame2;
-				
-				
+								
 				try {
 					
 					frame = new HomebuilderMain();
@@ -32,7 +31,6 @@ public class HomebuilderMain extends JFrame{
 					frame.setVisible(true);
 					frame2.setVisible(true);
 				
-					
 					frame2.setLocation(frame.getX() + 500, frame.getY() - 10);
 				
 					

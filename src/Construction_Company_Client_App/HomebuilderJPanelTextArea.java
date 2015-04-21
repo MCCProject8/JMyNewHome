@@ -55,7 +55,7 @@ public class HomebuilderJPanelTextArea extends JPanel{
 		ImageIcon image = new ImageIcon("blueprint.jpg");
 		picLabel = new JLabel();
 		picLabel.setIcon(image);
-		picLabel.setBounds(25,200,250,130);
+		picLabel.setBounds(30,200,280,130);
 		
 		add(picLabel);
 		add(scroll);

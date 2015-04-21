@@ -63,7 +63,7 @@ public class HomebuilderJPanelModels extends JPanel{
 		bedroom1.setBounds(0,0,45,20);
 		bedroom2.setBounds(42,0,45,20);
 		bedroom3.setBounds(0,21,45,20);
-		bedroom4.setBounds(42,21,45,20);
+		bedroom4.setBounds(41,21,45,20);
 		garageLabel.setBounds(18,50,50,20);
 		garage0.setBounds(0,70,45,20);
 		garage1.setBounds(42,70,45,20);

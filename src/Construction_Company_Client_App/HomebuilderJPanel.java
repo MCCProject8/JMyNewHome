@@ -17,12 +17,8 @@ public class HomebuilderJPanel extends Panel {
 		title = new JLabel();
 		title.setText("Build Your Home");		
 		title.setFont(font.cosmic );
-		
-		
-		add(title);
-		
-		
-		
+				
+		add(title);		
 	}
 
 }
